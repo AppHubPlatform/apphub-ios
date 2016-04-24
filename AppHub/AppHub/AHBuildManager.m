@@ -79,6 +79,12 @@ NSString *const AHBuildManagerBuildKey = @"AHNewBuildKey";
     return [NSDictionary dictionaryWithContentsOfURL:AHCurrentBuildInfoDirectory()];
 }
 
+- (AHBuild *)currentBuildForGroupIdentifier:(NSString *)groupIdentifier {
+    ahGroupIdentifier = groupIdentifier;
+    
+    return [self currentBuild];
+}
+
 - (AHBuild *)currentBuild
 {
     NSDictionary *currentBuildInfo = [self currentBuildInfo];
