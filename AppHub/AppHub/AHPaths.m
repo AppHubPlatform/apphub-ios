@@ -31,5 +31,9 @@ NSURL *AHBuildsDirectory(void)
 
 NSURL *AHRootDirectory(void)
 {
-    return [[[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:AHDirectoryName isDirectory:YES];
+    if(ahGroupIdentifier == nil) {
+        return [[[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:AHDirectoryName isDirectory:YES];
+    } else {
+        return [[[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:ahGroupIdentifier] URLByAppendingPathComponent: AHDirectoryName isDirectory:YES];
+    }
 }
