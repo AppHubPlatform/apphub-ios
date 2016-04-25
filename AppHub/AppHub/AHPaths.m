@@ -9,6 +9,8 @@
 
 #import "AHConstants.h"
 
+NSString *ahGroupIdentifier = nil;
+
 NSURL *AHBuildDirectory(NSString *buildID)
 {
     return [AHBuildsDirectory() URLByAppendingPathComponent:buildID isDirectory:YES];

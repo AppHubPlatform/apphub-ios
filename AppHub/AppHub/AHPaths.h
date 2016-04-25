@@ -13,5 +13,4 @@ extern NSURL *AHCurrentBuildInfoDirectory(void);
 extern NSURL *AHBuildsDirectory(void);
 extern NSURL *AHRootDirectory(void);
 
-NSString *ahGroupIdentifier = nil;
-
+extern NSString *ahGroupIdentifier;
