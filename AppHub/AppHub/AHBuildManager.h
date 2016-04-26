@@ -97,6 +97,8 @@ extern NSString *const AHBuildManagerBuildKey;
  */
 - (void)fetchBuildWithCompletionHandler:(AHBuildResultBlock)completionHandler;
 
+- (AHBuild *)currentBuildForGroupIdentifier:(NSString *)groupIdentifier;
+
 /**
  * Hook called after NSURLSessionDownloadTask has created
  *
