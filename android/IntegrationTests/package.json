@@ -1,0 +1,12 @@
+{
+  "name": "IntegrationTests",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "apphub": "file:../..",
+    "react-native": "^0.16.0"
+  }
+}
