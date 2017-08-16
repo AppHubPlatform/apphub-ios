@@ -12,3 +12,5 @@ extern NSURL *AHBundleDirectory(NSString *buildID);
 extern NSURL *AHCurrentBuildInfoDirectory(void);
 extern NSURL *AHBuildsDirectory(void);
 extern NSURL *AHRootDirectory(void);
+
+extern NSString *ahGroupIdentifier;
